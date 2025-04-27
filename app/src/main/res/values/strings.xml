@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RPGDiceRoller</string>
+    <string name="title_simple_rolls">Roll Dice</string>
+    <string name="title_complex_rolls">Complex Rolls</string>
+    <string name="title_settings">Settings</string>
+    <string name="roll">Roll</string>
+    <string name="input_sides_number">Input number of sides</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_simple_rolls">
+
+    <fragment
+        android:id="@+id/navigation_simple_rolls"
+        android:name="com.example.rpgdiceroller.ui.simpleRolls.SimpleRollsFragment"
+        android:label="@string/title_simple_rolls"
+        tools:layout="@layout/fragment_simple_rolls" />
+
+    <fragment
+        android:id="@+id/navigation_complex_rolls"
+        android:name="com.example.rpgdiceroller.ui.complexRolls.ComplexRollsFragment"
+        android:label="@string/title_complex_rolls"
+        tools:layout="@layout/fragment_complex_rolls" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.rpgdiceroller.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
