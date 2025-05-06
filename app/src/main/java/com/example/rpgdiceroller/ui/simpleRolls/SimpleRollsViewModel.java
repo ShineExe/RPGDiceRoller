@@ -14,7 +14,7 @@ public class SimpleRollsViewModel extends ViewModel {
 
     public SimpleRollsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue(String.valueOf(R.string.title_simple_rolls));
+        mText.setValue("0");
     }
 
     public int rollDice(int sidesNumber) {

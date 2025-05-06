@@ -7,14 +7,141 @@
     tools:context=".ui.simpleRolls.SimpleRollsFragment">
 
     <TextView
-        android:id="@+id/result_text"
+        android:id="@+id/hint_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/main_hint"
+        android:textAlignment="center"
+        android:textColor="@color/dark_red"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/dice_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/result_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_text">
+
+        <LinearLayout
+            android:id="@+id/small_dice_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/d2_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="2"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d4_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="4"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d6_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="6"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d8_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="8"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/big_dice_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/d10_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="10"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d12_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="12"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d20_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="20"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/d100_btn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/main_red"
+                android:text="100"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary"
+        android:background="@mipmap/ic_launcher_background"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:textSize="64sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +152,7 @@
         android:id="@+id/roll_button"
         android:layout_width="128dp"
         android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/roll"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +164,7 @@
         android:id="@+id/edit_sides_number"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:alpha="0.8"
         android:ems="10"
         android:hint="@string/input_sides_number"
