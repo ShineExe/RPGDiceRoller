@@ -16,8 +16,8 @@
         android:layout_marginBottom="24dp"
         android:text="@string/main_hint"
         android:textAlignment="center"
-        android:textColor="@color/dark_red"
-        android:textSize="24sp"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -29,7 +29,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="48dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/result_text"
@@ -52,8 +52,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d2_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="2"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -61,8 +63,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d4_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="4"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -70,8 +74,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d6_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="6"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -79,7 +85,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d8_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="8"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -99,8 +106,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d10_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="10"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -108,8 +117,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d12_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="12"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -117,8 +128,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d20_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="20"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
 
             <Button
@@ -126,8 +139,10 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/main_red"
+                android:background="@drawable/d100_shape"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="100"
+                android:textStyle="bold"
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
@@ -148,18 +163,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/roll_button"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/roll"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_sides_number" />
-
     <EditText
         android:id="@+id/edit_sides_number"
         android:layout_width="wrap_content"
@@ -173,4 +176,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_text" />
+
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/roll"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_sides_number" />
 </androidx.constraintlayout.widget.ConstraintLayout>

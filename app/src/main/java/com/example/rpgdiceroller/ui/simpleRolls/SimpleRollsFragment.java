@@ -15,6 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.rpgdiceroller.R;
 import com.example.rpgdiceroller.databinding.FragmentSimpleRollsBinding;
 import com.google.android.material.snackbar.Snackbar;
@@ -59,6 +61,7 @@ public class SimpleRollsFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View view) {
         int sidesNumber = 0;
+        resultText.setText("");
         if (view.getId() == R.id.roll_button) {
             String input = editSidesNumber.getText().toString();
             if (input.isEmpty())
@@ -93,6 +96,10 @@ public class SimpleRollsFragment extends Fragment implements View.OnClickListene
         }
 
         int result = srViewModel.rollDice(sidesNumber);
+        YoYo.with(Techniques.RotateInDownLeft)
+                .duration(500)
+                .playOn(resultText);
+
         resultText.setText(String.valueOf(result));
     }
 
